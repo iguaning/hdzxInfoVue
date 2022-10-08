@@ -28,7 +28,7 @@
               <PopoverPanel class="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                 <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                    <router-link :to="item.href" v-for="item in news" :key="item.name" replace class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
+                    <router-link :to="item.href" v-for="item in news" :key="item.name" class="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50">
                       <component :is="item.icon" class="h-6 w-6 flex-shrink-0 text-green-700" aria-hidden="true" />
                       <div class="ml-4">
                         <p class="text-base font-medium text-gray-900">{{ item.name }}</p>
@@ -41,8 +41,8 @@
             </transition>
           </Popover>
 
-          <router-link to="/fleamarket" replace class="text-base font-medium text-gray-500 hover:text-gray-900">知行超市</router-link>
-          <router-link to="/zone" replace class="text-base font-medium text-gray-500 hover:text-gray-900">知行空间</router-link>
+          <router-link to="/fleamarket" class="text-base font-medium text-gray-500 hover:text-gray-900">知行超市</router-link>
+          <router-link to="/zone" class="text-base font-medium text-gray-500 hover:text-gray-900">知行空间</router-link>
           <a href="http://www.hudazx.cn/" target="_blank" class="text-base font-medium text-gray-500 hover:text-gray-900">校园官网</a>
         </PopoverGroup>
 
@@ -70,7 +70,7 @@
             </div>
             <div class="mt-6">
               <nav class="grid gap-y-8">
-                <router-link replace v-for="item in news" :key="item.name" :to="item.href" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+                <router-link v-for="item in news" :key="item.name" :to="item.href" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
                   <component :is="item.icon" class="h-6 w-6 flex-shrink-0 text-green-700" aria-hidden="true" />
                   <span class="ml-3 text-base font-medium text-gray-900">{{ item.name }}</span>
                 </router-link>
@@ -80,8 +80,8 @@
           <div class="space-y-6 py-6 px-5">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
               <router-link to="/" class="text-base font-medium text-gray-500 hover:text-gray-700">首页</router-link>
-              <router-link to="/fleamarket" replace class="text-base font-medium text-gray-500 hover:text-gray-700">知行超市</router-link>
-              <router-link to="/zone" replace class="text-base font-medium text-gray-500 hover:text-gray-900">知行空间</router-link>
+              <router-link to="/fleamarket" class="text-base font-medium text-gray-500 hover:text-gray-700">知行超市</router-link>
+              <router-link to="/zone" class="text-base font-medium text-gray-500 hover:text-gray-900">知行空间</router-link>
               <a href="http://www.hudazx.cn/" target="_blank" class="text-base font-medium text-gray-500 hover:text-gray-900">校园官网</a>
             </div>
             <div>
