@@ -8,7 +8,6 @@
     "test:unit": "vitest --environment jsdom"
   },
   "dependencies": {
-    "@authing/vue-ui-components": "^3.1.31",
     "@headlessui/vue": "^1.7.3",
     "@heroicons/vue": "^2.0.12",
     "axios": "^1.1.1",

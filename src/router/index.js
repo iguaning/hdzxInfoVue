@@ -1,16 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
-      path: '',
-      redirect: '',
-      component: HomePage
-    },
-    {
-      path: '',
+      path: '/',
       name: 'home',
       component: HomePage
     },
@@ -50,6 +45,11 @@ const router = createRouter({
       path: '/register',
       name: 'userregister',
       component: () => import('../views/UserRegister.vue')
+    },
+    {
+      path: '/*',
+      redirect: '',
+      component: HomePage
     }
   ]
 })
