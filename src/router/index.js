@@ -36,21 +36,16 @@ const router = createRouter({
       name: 'schoolzone',
       component: () => import('../views/SchoolZone.vue')
     },
-    {
-      path: '/login',
-      name: 'userlogin',
-      component: () => import('../views/UserLogin.vue')
-    },
-    {
-      path: '/register',
-      name: 'userregister',
-      component: () => import('../views/UserRegister.vue')
-    },
-    {
-      path: '/*',
-      redirect: '',
-      component: HomePage
-    }
+    // {
+    //   path: '/login',
+    //   name: 'userlogin',
+    //   component: () => import('../views/UserLogin.vue')
+    // },
+    // {
+    //   path: '/register',
+    //   name: 'userregister',
+    //   component: () => import('../views/UserRegister.vue')
+    // }
   ]
 })
 

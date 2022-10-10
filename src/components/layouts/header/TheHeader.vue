@@ -47,8 +47,8 @@
         </PopoverGroup>
 
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <router-link to="/login" replace class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">登录</router-link>
-          <router-link to="/register" replace class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-green-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-800 hover:text-white">注册</router-link>
+          <button @click="login = true, loginShow = true, registerShow = false" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">登录</button>
+          <button @click="login = true, loginShow = false, registerShow = true" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-green-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 hover:text-white">注册</button>
         </div>
       </div>
     </div>
@@ -85,11 +85,11 @@
               <a href="http://www.hudazx.cn/" target="_blank" class="text-base font-medium text-gray-500 hover:text-gray-900">校园官网</a>
             </div>
             <div>
-              <router-link to="/register" replace class="flex w-full items-center justify-center rounded-md border border-transparent bg-green-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-800">注册</router-link>
+              <button @click="login = true, loginShow = false, registerShow = true" class="flex w-full items-center justify-center rounded-md border border-transparent bg-green-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700">注册</button>
               <p class="mt-6 text-center text-base font-medium text-gray-500">
                 Existing customer?
                 {{ ' ' }}
-                <router-link to="/login" replace class="text-green-600 hover:text-green-800">登录</router-link>
+                <button @click="login = true, loginShow = true, registerShow = false" class="text-green-600 hover:text-green-800">登录</button>
               </p>
             </div>
           </div>
@@ -108,6 +108,11 @@ import {
   XMarkIcon
 } from '@heroicons/vue/24/outline'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { useModelStore } from '@/stores/Model'
+import { storeToRefs } from 'pinia'
+
+const useModel = useModelStore()
+const { login, loginShow, registerShow } = storeToRefs(useModel)
 
 const news = [
   {
