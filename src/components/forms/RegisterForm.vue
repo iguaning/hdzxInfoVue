@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8 mx-auto">
+  <div class="min-h-full flex flex-col justify-center mx-auto">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <img class="mx-auto h-12 w-auto" src="../../assets/logo.png" alt="知行通" />
     </div>
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-      <div class="bg-white">
+      <div class="bg-white py-8 px-4 sm:px-10">
         <form class="space-y-6" action="#" method="POST">
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700"> 邮箱 </label>
